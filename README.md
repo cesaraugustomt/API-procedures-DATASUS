@@ -13,28 +13,6 @@
         migrations: [`${__dirname}/migration/{.ts,*.js}`],
         migrationsRun: true,
 
-## @@@@@
-typeorm: mapeador relacional de objetos
-a função dele é pegar coisas como classes do javascript/typescript
-e mapear no nucleo a tabela correspondente com as colunas correspondentes
-com base em qualquer campo que você definiu nessa classe.
-Então entities serve como uma maneira de mapear uma classe typescript real
-para uma tabela sql real.
-entites = 'Mapa do mapa de sql.(mapa real do mapa da camada do ORM ou SQL).
-dessa forma não precisamos escrever instruções sql real e só javascript.
-
-spring bot tem seu próprio jeito de fazer mapeamento algo parecido com
-JPA
-
-###
-
-Existe um problema pessoal sobre nomear tabelas no plural ou não.
-
-
-## Initial
-nest new name_project
-yarn add @nestjs/typeorm typeorm mysql2
-
 # config database
 https://docs.nestjs.com/techniques/database
 create past typeorm (repository) 
@@ -45,32 +23,8 @@ nest g module procedures
 nest g controller /procedures/controllers/procedures
 nest g service /procedures/service/procedures
 
-é sujerido criar o dto real e em seguida criar um tipo separado para
-a versão finalizada que será salva no banco de dados o squema finalizado
-que será salvo no banco de dados ex:
 
-```
-Controller
-
-  @Post()
-  createUser(@Body() createUserDto: CreateUserDto) {
-    const { ...userDetails, confirmPassword } = createUserDto;
-    this.userService.createUser(userDetails);
-  }
-}
-
-DTO: Objeto de transferência de dados(Data Transfer Objects)
-ele define como os dados serão enviados pela rede
-rede sig de um lado para o outro do controller para o service.
-
-export class CreateUserDto {
-  username: string;
-  password: string;
-  confirmPassword: string;
-}
-
-```
-  // TODO:
+## TODO:
     08/06/2023
     [x] filter para product e procedures da company_id
     [x] criar salvamento de imagens
