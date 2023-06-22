@@ -18,7 +18,7 @@ https://docs.nestjs.com/techniques/database
 create past typeorm (repository) 
               entities
 
-# Comando do nestjs para criar um modulo
+# Comando do nestjs para criar um novo modulo
 nest g module procedures
 nest g controller /procedures/controllers/procedures
 nest g service /procedures/service/procedures
