@@ -36,3 +36,7 @@ nest g service paste_serviceName exemplo: "/procedures/service/procedures"
 [] - gp de médicamento
 [] = CBOs
 [] = procedimentos
+
+# Links utils
+
+https://dbdiagram.io/d/64beddb602bd1c4a5e9e35c0
