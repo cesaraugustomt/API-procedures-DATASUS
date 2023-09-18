@@ -1,0 +1,18 @@
+import { MigrationInterface, QueryRunner } from 'typeorm';
+
+export class TB_GRUPO_ATIVIDADEMigration1694458279747
+  implements MigrationInterface
+{
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`
+      INSERT INTO TB_GRUPO_ATIVIDADE (CO_GRUPO_ATIVIDADE,NO_GRUPO_ATIVIDADE,DS_GRUPO_ATIVIDADE,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('02', 'Vigilância em Saúde', 'Processos contínuos e sistemáticos de coleta, consolidação, análise e disseminação de dados sobre eventos relacionados à saúde, visando o planejamento e a implementação de medidas de saúde pública para a proteção da saúde da população, a prevenção e controle de riscos, agravos e doenças, bem como para a promoção da saúde (Portaria nº 1378/GM/MS/2013).', '202308', '01/2017A', '2');
+INSERT INTO TB_GRUPO_ATIVIDADE (CO_GRUPO_ATIVIDADE,NO_GRUPO_ATIVIDADE,DS_GRUPO_ATIVIDADE,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('03', 'Gestão da Saúde', 'Atividades de cunho administrativo ou técnico-administrativo que englobam o planejamento e a administração de sistemas e de planos de saúde, a regulação assistencial, do acesso e de sistemas de saúde e a logística de insumos da atenção à saúde', '202308', '01/2017A', '2');
+INSERT INTO TB_GRUPO_ATIVIDADE (CO_GRUPO_ATIVIDADE,NO_GRUPO_ATIVIDADE,DS_GRUPO_ATIVIDADE,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('04', 'Outras Atividades Relacionadas à Saúde Humana', 'Atividades que visam apoiar ou complementar de forma indireta as demais atividades.', '202308', '01/2017A', '2');
+
+`);
+  }
+
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    // Reverta a migração se necessário
+  }
+}

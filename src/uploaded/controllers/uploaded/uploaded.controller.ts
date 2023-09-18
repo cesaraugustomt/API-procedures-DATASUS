@@ -86,7 +86,6 @@ export class UploadedController {
       );
     }
 
-    // Apaga o arquivo existente
     const filePath = './uploads/products/2023/' + productById.product_image;
 
     const response = {

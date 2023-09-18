@@ -1,0 +1,22 @@
+import { MigrationInterface, QueryRunner } from 'typeorm';
+
+export class TB_DESFECHOMigration1694458279708 implements MigrationInterface {
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`
+      INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('02', 'Alta Voluntária', 'Conclusão do contato assistencial por decisão do indivíduo comunicada ao estabelecimento de saúde, sem que o profissional de saúde responsável pela sua assistência confirme a finalização do cuidado.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('03', 'Encaminhamento', 'Conclusão do contato assistencial com orientação do profissional responsável para continuidade do cuidado em outro ponto de atenção', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('04', 'Evasão', 'Conclusão do contato assistencial ocorrida quando o indivíduo abandona o estabelecimento de saúde por vontade própria sem solicitação ou condição de saúde que permita sua saída confirmada pelo profissional responsável pela sua assistência.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('05', 'Ordem Judicial', 'Conclusão do contato assistencial ocorrida quando o estabelecimento de saúde recebe uma ordem do juiz para dar alta ao indivíduo.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('06', 'Óbito', 'Conclusão do contato assistencial em decorrência da morte do indivíduo.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('07', 'Permanência', 'Conclusão parcial do contato assistencial ocorrida quando o indivíduo permanece em tratamento, mas o estabelecimento de saúde, por qualquer motivo, deseja enviar as informações do contato assistencial.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('08', 'Retorno', 'Conclusão do contato assistencial com orientação do profissional responsável para continuidade do cuidado no mesmo ponto de atenção.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('09', 'Transferência', 'Conclusão do contato assistencial por necessidade imediata de continuidade do cuidado em outro estabelecimento de saúde, confirmada pelo profissional responsável.', '202308', '01/2017A', '2');
+INSERT INTO TB_DESFECHO (CO_DESFECHO,NO_DESFECHO,DS_DESFECHO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('99', 'Sem registro no modelo de informação de origem', 'Usado apenas para ETL (ANS e AB-SUS) em função de os sistemas de origem não possuir o campo no modelo de informação ou de o dado não estar preenchido. Não deve ser utilizado na captação dos atendimentos em saúde no CMD.', '202308', '08/2020A', '2');
+
+`);
+  }
+
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    // Reverta a migração se necessário
+  }
+}

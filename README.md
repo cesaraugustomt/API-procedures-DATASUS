@@ -10,6 +10,9 @@
     "migration:revert": "npm run typeorm --migration:revert"
 ```
 
+\dist\database\migration\1694458279889-TB_PROCEDIMENTO.js
+npx typeorm migration:run -d ./dist/database/migration/1694458279889-TB_PROCEDIMENTO.js
+
 npx typeorm migration:create ./database/migration/inser_in_tb_grupo,
 
 ## Config exemplo
@@ -36,6 +39,11 @@ nest g service paste_serviceName exemplo: "/procedures/service/procedures"
 [] - gp de médicamento
 [] = CBOs
 [] = procedimentos
+
+TB_TIPO_MARCACAO
+TB_CIAP2
+TB_REACAO_ADVERSA
+TB_CBHPM
 
 # Links utils
 

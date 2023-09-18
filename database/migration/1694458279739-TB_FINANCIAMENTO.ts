@@ -1,0 +1,25 @@
+import { MigrationInterface, QueryRunner } from 'typeorm';
+
+export class TB_FINANCIAMENTOMigration1694458279739
+  implements MigrationInterface
+{
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`
+      INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO ) VALUES ('02', 'Plano de Saúde Público', 'Ações e serviços de saúde custeados por pessoas jurídicas de direito público que operam planos de saúde de caráter público, como os fundos,
+institutos e fundações de saúde dos servidores públicos e os fundos de saúde das forças armadas e auxiliares.', '202308', '09/2019A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('03', 'Plano de Saúde Privado', 'Ações e serviços de saúde custeados por pessoas jurídicas de direito privado que operam planos de assistência à saúde regulados pela Agência
+Nacional de Saúde Suplementar (ANS), nos termos da Lei nº 9.656, de 3 de junho de 1998.', '202308', '09/2019A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('04', 'Particular', 'Ações e serviços de saúde custeados diretamente por uma pessoa física ou jurídica.', '202308', '09/2019A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('05', 'Gratuidade', 'Ações e serviços de saúde custeados pelo próprio estabelecimento, seja para atendimento a uma urgência sem o reembolso ou em caráter de caridade.', '202308', '09/2019A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('06', 'Recursos Estaduais/Municipais', 'Destinado às ações e serviços de saúde não constantes da Tabela de Procedimentos do SUS vigente, remunerados exclusivamente por gestores estaduais e/ou municipais.', '202308', '02/2023A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('07', 'PROADI (PROGRAMA DE APOIO AO FORTALECIMENTO DO SUS)', 'Destinado às ações e serviços de saúde realizados em estabelecimentos de saúde com adesão a este programa de acordo com Plano de Trabalho acordado entre gestor e estabelecimento.', '202308', '02/2023A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('08', 'PRONON (PROGRAMA NACIONAL DE APOIO A ATENÇÃO ONCOLÓGICA)', 'Destinado às ações e serviços de saúde realizados em estabelecimentos de saúde com adesão a este programa, comprovado no CNES e de acordo com Plano de Trabalho acordado entre gestor e estabelecimento.', '202308', '02/2023A', '2');
+INSERT INTO TB_FINANCIAMENTO (CO_FINANCIAMENTO,NO_FINANCIAMENTO,DS_FINANCIAMENTO,DT_COMPETENCIA,CO_VERSAO,ST_ACAO) VALUES ('09', 'PRONAS (PROGRAMA DE APOIO A ATENÇÃO À SAÚDE DA PESSOA COM DEFICIÊNCIA - PCD)', 'Destinado às ações e serviços de saúde realizados em estabelecimentos de saúde com adesão a este programa, comprovado no CNES e de acordo com Plano de Trabalho acordado entre gestor e estabelecimento.', '202308', '02/2023A', '2');
+
+`);
+  }
+
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    // Reverta a migração se necessário
+  }
+}
