@@ -4,7 +4,7 @@ services:
     image: datajointbot/mysql:8.0-slim
     restart: always
     environment:
-      MYSQL_DATABASE: 'thot_test'
+      MYSQL_DATABASE: 'test'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: '123456'
       MYSQL_ROOT_PASSWORD: '123456'
@@ -13,6 +13,6 @@ services:
     expose:
       - '3306'
     volumes:
-      - db-thot:/var/lib/mysql
+      - db:/var/lib/mysql
 volumes:
-  db-thot:
+  db:
